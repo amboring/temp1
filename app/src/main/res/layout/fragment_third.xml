@@ -1,0 +1,64 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:text="Review"
+        android:gravity="center"
+        android:textSize="40dp"
+        />
+    <TextView android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:textSize="20dp"
+        android:text=""
+        />
+
+    <TextView android:id="@+id/text_email"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:text=""
+       />
+    <TextView android:id="@+id/text_phone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:text=""
+        />
+    <TextView android:id="@+id/text_house"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:text=""
+        />
+    <TextView android:id="@+id/text_country"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:text=""
+        />
+    <TextView android:id="@+id/text_city"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:text=""
+    />
+    <Button android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        android:text="Submit"
+        android:layout_height="0dp"/>
+</LinearLayout>

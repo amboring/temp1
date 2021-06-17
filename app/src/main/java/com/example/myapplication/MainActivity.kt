@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), FirstFragment.onFragmentListener,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportFragmentManager.beginTransaction().add(R.id.fragment_holder,FirstFragment()).commit()
+        supportFragmentManager.beginTransaction().addToBackStack("").add(R.id.fragment_holder,FirstFragment()).commit()
     }
 
     override fun onClick(name: String, email: String,phone:String) {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), FirstFragment.onFragmentListener,
         var temp=SecondFragment.newInstance(name,email,phone)
         Log.i("***********","onClick")
         Log.i("**************", temp.toString())
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_holder,temp).commit()
+        supportFragmentManager.beginTransaction().addToBackStack("").replace(R.id.fragment_holder,temp).commit()
    }
 
     override fun onClickSecond(house: String, city: String, country: String) {
@@ -48,13 +48,12 @@ class MainActivity : AppCompatActivity(), FirstFragment.onFragmentListener,
 
         var frag= ThirdFragment.newInstance(person)
 
-        supportFragmentManager.beginTransaction()
+        supportFragmentManager.beginTransaction().addToBackStack("")
             .replace(R.id.fragment_holder,frag).commit()
     }
 
     override fun onClickThird() {
-        Log.i("****","onclickthird")
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_holder,ThankYouFragment()).commit()
+        supportFragmentManager.beginTransaction().addToBackStack("").replace(R.id.fragment_holder,ThankYouFragment()).commit()
     }
 
 }
